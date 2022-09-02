@@ -12,7 +12,7 @@ let sum = 0;
 
 btn.addEventListener("click", function() {
     if (userName.value !== '' && userSurname.value !== '') {
-        if (sum == 0) {
+        if (sum === 0) {
             alert (`Заказачик: ${userSurname.value} ${userName.value} \nВыберите товары`);
         }
         else {
@@ -32,7 +32,7 @@ btn.addEventListener("click", function() {
 
 goodsElements.forEach((element, i) => {
     element.addEventListener("change", function() { 
-        if (element.checked && countElements[i].value == 0) {
+        if (element.checked && countElements[i].value === 0) {
             countElements[i].value = 1;
         }
         if (!element.checked) {
@@ -50,7 +50,7 @@ countElements.forEach((element, i) => {
                 element.value = 0;
                 element.focus();
             }
-            if (element.value == 0) {
+            if (element.value === 0) {
                 goodsElements[i].checked = false;
                 reloadPrice();
             }
